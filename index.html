@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> The Kingdom's Railway Network</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="menu">
+    <h1>RAILWAYS</h1>
+    <input type="text" id="player-name" placeholder="Please enter your name " required>
+    <div class="difficulty-container">
+      <h2>Levels</h2>
+      <div class="difficulty-option">
+        <button class="difficulty-button" data-level="5x5">Easy</button>
+        <p class="difficulty-label">5 x 5</p>
+      </div>
+      <div class="difficulty-option">
+        <button class="difficulty-button" data-level="7x7">Difficult</button>
+        <p class="difficulty-label">7 x 7</p>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: space-between;">
+      <button class="menu-button" id="rules-button">Rules</button>
+      <button class="menu-button" id="start-game-button">Start</button>
+    </div>
+  </div>
+  <div id="game" style="display: none;">
+    <h2>Player: <span id="player-display"></span></h2>
+    <h3>Time Elapsed: <span id="time-elapsed">0s</span></h3>
+    <div id="grid"></div>
+  </div>
+  <div id="rail-menu" style="display: none;">
+    <h3>Choose the piece you desire:</h3>
+    <div class="rail-item straight" draggable="true" data-type="straight" data-rotation="0"></div>
+    <div class="rail-item turn" draggable="true" data-type="turn" data-rotation="0"></div>
+    <div class="rail-item bridge-rail" draggable="true" data-type="bridge-rail" data-rotation="0"></div>
+    <div class="rail-item mountain-rail" draggable="true" data-type="mountain-rail" data-rotation="0"></div>
+  </div>
+  <div id="alertModal" class="modal">
+    <div class="modal-content">
+      <h2>Warning</h2>
+      <p id="alertMessage"></p>
+      <span class="close-modal" id="close-alert">Close</span>
+    </div>
+  </div>
+  <div id="rulesModal" class="modal">
+    <div class="modal-content">
+      <h2>Rules</h2>
+      <p>Rules are simple complete a full circuit using all the available tiles.
+        Use drag and drop feature to place the tiles on the grid.
+        You can rotate the tiles by clicking on them.
+        If your tile doesn't get placed on the grid that means it doesn't fit there.
+        Enjoy the game.</p>
+      <span class="close-modal" id="close-rules">Got It</span>
+    </div>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>

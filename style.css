@@ -1,0 +1,202 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#menu, #game, #rail-menu {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #D4A055;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.difficulty-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.difficulty-option {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+
+.difficulty-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100px;
+}
+
+.difficulty-button.active {
+  background-color: #45a049; 
+}
+
+.menu-button {
+  padding: 10px 20px;
+  background-color: #4CAF50; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 10px 5px; 
+  width: calc(50% - 10px); 
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close-modal {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#grid {
+  display: grid;
+  gap: 2px;
+  margin-top: 20px;
+  justify-content: center; 
+}
+
+.grid-cell {
+  width: 50px; 
+  height: 50px; 
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+
+.grid-cell.empty {
+  background-image: url('pics/tiles/empty.png');
+  background-size: cover;
+}
+
+.grid-cell.mountain {
+  background-image: url('pics/tiles/mountain.png');
+  background-size: cover;
+}
+
+.grid-cell.mountain-rail {
+  background-image: url('pics/tiles/mountain_rail.png');
+  background-size: cover;
+}
+
+.grid-cell.water {
+  background-image: url('pics/tiles/oasis.png');
+  background-size: cover;
+}
+
+.grid-cell.bridge {
+  background-image: url('pics/tiles/bridge.png');
+  background-size: cover;
+}
+
+.grid-cell.bridge-rail {
+  background-image: url('pics/tiles/bridge_rail.png');
+  background-size: cover;
+}
+
+.grid-cell.turn {
+  background-image: url('pics/tiles/curve_rail.png');
+  background-size: cover;
+}
+
+.grid-cell.straight {
+  background-image: url('pics/tiles/straight_rail.png');
+  background-size: cover;
+}
+
+.rail-item {
+  width: 50px;
+  height: 50px; 
+  margin: 5px;
+  display: inline-block;
+  cursor: grab;
+}
+
+.rail-item.straight {
+  background-image: url('pics/tiles/straight_rail.png');
+  background-size: cover;
+}
+
+.rail-item.turn {
+  background-image: url('pics/tiles/curve_rail.png');
+  background-size: cover;
+}
+
+.rail-item.bridge-rail {
+  background-image: url('pics/tiles/bridge_rail.png');
+  background-size: cover;
+}
+
+.rail-item.mountain-rail {
+  background-image: url('pics/tiles/mountain_rail.png');
+  background-size: cover;
+}
+
+.rotate-0 {
+  transform: rotate(0deg);
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.rotate-270 {
+  transform: rotate(270deg);
+}
